@@ -3,8 +3,9 @@ function App() {
  
 
   return (
-    <div className='antialiased'>
+    <div className='antialiased bg-orange-400'>
       <Navbar />
+      
     </div>
   )
 }
