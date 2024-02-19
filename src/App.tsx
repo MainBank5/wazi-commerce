@@ -1,13 +1,18 @@
-import Navbar from './components/Navbar.tsx'
+import Home from "./Pages/Home.tsx";
+import Navbar from "./components/Navbar";
+import {Routes, Route} from "react-router-dom"
+
 function App() {
  
 
   return (
-    <div className='antialiased bg-orange-400'>
-      <Navbar />
-      
+    <div className='antialiased'> 
+    <Navbar/>
+    <Routes>
+      <Route path="/" element={<Home />}></Route>
+    </Routes>
     </div>
   )
 }
 
-export default App
+export default App;
