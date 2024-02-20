@@ -2,6 +2,7 @@
 
 type Buttonprops = {
     children:React.ReactNode
+    
 }
 
 const Button = ({children} : Buttonprops) => {

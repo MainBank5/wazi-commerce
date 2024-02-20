@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import { Link } from 'react-router-dom'
+import Button from '../UI/Button'
 import {FaTimes, FaBars, FaShoppingCart, FaHeart} from 'react-icons/fa'
 
 const Navbar = () => {
@@ -13,11 +14,16 @@ const Navbar = () => {
     const  handleNavbar = ()=>{
        setMobileMenu(!mobilemenu)
     }
+
+    const handleMobileMenu = () => {
+      setMobileMenu(false)
+    }
+
   return (
     <nav className='w-full h-24 shadow-lg'>
         <div className='flex justify-between items-center text-center p-6 mx-4 md:mx-8'>
             <div>
-                <a href="/" className='text-3xl md:text-2xl '>ShopWay</a>
+                <Link to="/" className='text-3xl md:text-2xl '>ShopWay</Link>
             </div>
 
             <div className='hidden md:block'>
@@ -31,7 +37,7 @@ const Navbar = () => {
             </div>
 
 
-            <div className='flex justify-between items-center text-pink-600 gap-8'>
+            <div className='flex justify-between items-center text-orange-400 gap-8'>
                 <Link to="/cart"><FaShoppingCart size={20}/></Link>
                 <Link to="/wishlist"><FaHeart size={20}/></Link>
             </div>
@@ -43,15 +49,20 @@ const Navbar = () => {
              {mobilemenu && <div className="md:hidden bg-slate-500 absolute h-screen w-full top-0 left-0 ">
                 <ul  className="flex flex-col items-center justify-center h-[80%] gap-10">
                   {Navlinks.map((item, index) => (
-                    <li key={index}>
+                    <li key={index} onClick={handleMobileMenu}>
                       <Link to={item.url} className='text-white block py-2 px-4'>{item.title}</Link>
                     </li>
+                    
                   ))}
                 </ul>
+                <div onClick={handleMobileMenu} className='absolute top-[33rem] right-[9.5rem]'>
+                  <Button > <Link to="/cart">Cart</Link></Button>
+                </div>
+                
               </div>}
         </div>
     </nav>
   )
 }
 
-export default Navbar
+export default Navbar;
