@@ -2,7 +2,9 @@
 
 const Accessories = () => {
   return (
-    <div>Accessories</div>
+    <div>Accessories
+      this will show Accessories
+    </div>
   )
 }
 
