@@ -25,8 +25,8 @@ Open your preferred browser and go to http://localhost:3000 to view the applicat
 - Context API: A React feature for managing global state within an application.
   
 ## Project Structure
-src/pages: Contains individual pages or components representing various routes of the application.
-src/ui: Houses UI components that are shared across different parts of the application.
-src/assets: Stores static assets such as images, icons, and other media files.
-src/components: Contains reusable React components used throughout the project.
-src/context: Contains the logic and implementation of the Context API for state management.
+- src/pages: Contains individual pages or components representing various routes of the application.
+- src/ui: Houses UI components that are shared across different parts of the application.
+- src/assets: Stores static assets such as images, icons, and other media files.
+- src/components: Contains reusable React components used throughout the project.
+- src/context: Contains the logic and implementation of the Context API for state management.
